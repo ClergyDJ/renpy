@@ -1,14 +1,18 @@
-﻿# The script of the game goes in this file.
+﻿#Roblox Man Dating Simulator
 
-# Declare characters used by this game. The color argument colorizes the
-# name of the character.
+define mc = Character("[name]")
+define g = Character("[name 2]")
+define o = Character("[Josh]")
+define d = Character("[Cashier]")
+define s = Character("[???]")
+define h = Character("[Hatsune Miku]")
+define a = Character("[yippee]")
+define t = Character("[Staff 1]")
+define idk = Character ("[Staff 2]")
 
-define e = Character("Eileen")
 
 
-# The game starts here.
-
-label start:
+label start: 
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the
@@ -20,14 +24,16 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
+    $ name = renpy.input("What is your name?")
+    $ name = name.strip()
+    
+call pronounselection
+jump intro
 
-    # These display lines of dialogue.
+label intro:
 
-    e "You've created a new Ren'Py game."
-
-    e "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
+"You are walking down the streets of Boxburg."
+"You have never been in this world before."
+mc "yippee"
 
     return
